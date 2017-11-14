@@ -2,7 +2,7 @@
   "name": "styled-api",
   "description": "Constraint based styling api based on styled-system",
   "author": "John Otander",
-  "version": "0.0.1-0",
+  "version": "0.0.1-1",
   "main": "index.js",
   "files": [
     "index.js"
