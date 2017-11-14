@@ -51,9 +51,7 @@ module.exports.propTypes = (api, theme) =>
 
 module.exports.xProduct = (api, theme) => {
   const xproduct = reduce(pipe(xprod, map(unnest)), [[]])
-  const valueByProp = object => (acc, i) => concat(acc, [
-    map(v => ({ [i]: v }), object[i])
-  ])
+  const valueByProp = object => prop => map(v => ({ [prop]: v }), object[prop])
 
-  return map(mergeAll, xproduct(reduce(valueByProp(theme), [], Object.keys(api))))
+  return map(mergeAll, xproduct(map(valueByProp(theme), Object.keys(api))))
 }
