@@ -3,6 +3,7 @@
 const {
   map,
   pipe,
+  merge,
   xprod,
   unnest,
   reduce,
@@ -51,8 +52,7 @@ module.exports.propTypes = (api, theme) =>
 module.exports.xProduct = (api, theme) => {
   const styles = Object.keys(api)
 
-  const combine = (acc, i) => Object.assign({}, acc, i)
-  const reduceObjectArray = arr => reduce(combine, {}, arr)
+  const reduceObjectArray = arr => reduce(merge, {}, arr)
   const xproduct = reduce(pipe(xprod, map(unnest)), [[]])
   const valueByProp = object => (acc, i) => concat(acc, [
     map(v => ({ [i]: v }), object[i])
