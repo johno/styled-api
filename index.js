@@ -3,11 +3,11 @@
 const {
   map,
   pipe,
-  merge,
   xprod,
   unnest,
   reduce,
-  concat
+  concat,
+  mergeAll
 } = require('ramda')
 
 const {
@@ -52,11 +52,10 @@ module.exports.propTypes = (api, theme) =>
 module.exports.xProduct = (api, theme) => {
   const styles = Object.keys(api)
 
-  const reduceObjectArray = arr => reduce(merge, {}, arr)
   const xproduct = reduce(pipe(xprod, map(unnest)), [[]])
   const valueByProp = object => (acc, i) => concat(acc, [
     map(v => ({ [i]: v }), object[i])
   ])
 
-  return map(reduceObjectArray, xproduct(reduce(valueByProp(theme), [], styles)))
+  return map(mergeAll, xproduct(reduce(valueByProp(theme), [], styles)))
 }
