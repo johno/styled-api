@@ -1,0 +1,29 @@
+{
+  "name": "styled-api",
+  "description": "Constraint based styling api based on styled-system",
+  "author": "John Otander",
+  "version": "0.0.1-0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": "johnotander/styled-api",
+  "keywords": [
+    "style",
+    "styled",
+    "design",
+    "system"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.25.0",
+    "styled-system": "^1.0.8"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "react": "^16.1.1"
+  }
+}
