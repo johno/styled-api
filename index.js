@@ -20,6 +20,13 @@ const err = (value, name) => {
   throw new Error(`styled-lift cannot accept ${value} for ${name}`)
 }
 
+const PROP_MAP = {
+  backgroundColor: 'color',
+  bg: 'color',
+  margin: 'space',
+  padding: 'space'
+}
+
 module.exports.propTypes = (api, theme) =>
   Object
     .keys(theme)
@@ -50,6 +57,9 @@ module.exports.propTypes = (api, theme) =>
     }, {})
 
 module.exports.xProduct = (api, theme) => {
+  console.log(api)
+  console.log(theme)
+
   const xproduct = reduce(pipe(xprod, map(unnest)), [[]])
   const valueByProp = object => prop => map(v => ({ [prop]: v }), object[prop])
 

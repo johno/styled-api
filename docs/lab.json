@@ -1,0 +1,135 @@
+{
+  "name": "docs",
+  "library": "glamorous",
+  "components": [
+    {
+      "name": "H1",
+      "type": "h1",
+      "props": {
+        "fontSize": 5
+      },
+      "style": {
+        "lineHeight": "1.2"
+      },
+      "examples": [
+        "<H1>Hello</H1>"
+      ],
+      "system": []
+    },
+    {
+      "name": "P",
+      "type": "p",
+      "props": {},
+      "style": {
+        "maxWidth": "30em",
+        "lineHeight": "2"
+      },
+      "examples": [
+        "<P>This is a paragraph. It's pretty neat. Look at it go, lots of text. Lots.</P>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Box",
+      "type": "div",
+      "props": {},
+      "style": {},
+      "examples": [
+        "<Box>Hello</Box>"
+      ]
+    },
+    {
+      "name": "ShadowBox",
+      "type": "Box",
+      "props": {
+        "borderRadius": 5,
+        "px": 3,
+        "py": 3,
+        "borderColor": "transparent",
+        "borderWidth": 1
+      },
+      "style": {
+        "boxShadow": "${props.boxShadow || props.theme.boxShadows[1]}"
+      },
+      "examples": [
+        "<ShadowBox>\n  Hello, world!\n</ShadowBox>"
+      ],
+      "system": [
+        "borderRadius",
+        "borderColor",
+        "borderWidth"
+      ]
+    },
+    {
+      "name": "Avatar",
+      "type": "img",
+      "props": {
+        "src": "https://pbs.twimg.com/profile_images/854537128994275328/nVZX1MEh_400x400.jpg",
+        "size": "48px",
+        "borderRadius": 999999,
+        "boxShadow": 0
+      },
+      "style": {
+        "height": "${props.size}",
+        "width": "${props.size}",
+        "boxShadow": "${props.boxShadow ? props.theme.boxShadow[props.boxShadow] : \"\"}"
+      },
+      "examples": [
+        "<Avatar boxShadow={3} />"
+      ],
+      "system": [
+        "borderRadius"
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "button",
+      "props": {
+        "fontSize": 1,
+        "color": "white",
+        "bg": "blue",
+        "py": 2,
+        "px": 4
+      },
+      "style": {
+        "display": "inline-block",
+        "fontFamily": "inherit",
+        "borderWidth": 0,
+        "borderRadius": "4px",
+        "appearance": "none"
+      },
+      "examples": [
+        "<Button>Hello</Button>"
+      ],
+      "system": []
+    },
+    {
+      "name": "ProfileCard",
+      "imports": [
+        "ShadowBox",
+        "Button",
+        "H1",
+        "P",
+        "Box",
+        "Avatar"
+      ],
+      "jsx": "<ShadowBox {...props.shadowBox}>\n  <Box>\n    <Avatar\n      children={props.avatarUrl}\n    />\n\n    <H1\n      my={2}\n      {...props.nameProps}\n      children={props.name}\n    />\n  </Box>\n\n  <Box>\n    <P\n      my={0}\n      children={props.description}\n    />\n  </Box>\n</ShadowBox>",
+      "examples": [
+        "<ProfileCard\n  name='Brent Jackson'\n  description='Trying to build better tools for designers and developers. Based in Brooklyn, NY.'\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Font",
+      "type": "div",
+      "props": {},
+      "style": {
+        "fontFamily": "${props.theme.fonts[0]}"
+      },
+      "examples": [
+        "<Font>Hello</Font>"
+      ],
+      "system": []
+    }
+  ]
+}

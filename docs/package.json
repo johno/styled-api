@@ -1,0 +1,14 @@
+{
+  "name": "docs",
+  "scripts": {
+    "start": "lab -d library --pkg && x0 dev Index.js"
+  },
+  "dependencies": {
+    "@compositor/lab": "^1.0.0-33",
+    "@compositor/x0": "^2.0.0-13",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.11.0",
+    "reflexbox": "^3.0.0-0",
+    "styled-api": "0.0.1-1"
+  }
+}
