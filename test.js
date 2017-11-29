@@ -1,23 +1,17 @@
 const test = require('ava')
 const styled = require('./')
 
+const theme = require('./fixture.json')
+
 const {
   xProduct,
   propTypes
 } = require('./')
 
-const theme = {
-  borderRadius: [0, 1, 2],
-  borderStyle: ['solid', 'dotted'],
-  borderWidth: [3, 4, 5, 6],
-  space: [0, 2, 4, 8, 16, 32]
-}
-
 const api = {
   borderRadius: true,
-  borderStyle: true,
-  borderWidth: true,
-  space: true
+  color: true,
+  bg: ['purple', 'red', 'yellow']
 }
 
 test('xProduct returns all possible combinations', t => {
@@ -35,5 +29,5 @@ test('returns propType validations that raises on invalid values', t => {
 test('returns propType validations that does not raise on valid values', t => {
   const result = propTypes(api, theme)
 
-  t.notThrows(() => result.borderRadius(2))
+  t.notThrows(() => result.borderRadius(4))
 })

@@ -1,0 +1,68 @@
+{
+  "fonts": [
+    "-apple-system, BlinkMacSystemFont, sans-serif"
+  ],
+  "space": [
+    0,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "fontSizes": [
+    12,
+    14,
+    16,
+    20,
+    24,
+    32,
+    48,
+    64,
+    72,
+    96
+  ],
+  "colors": {
+    "black": "#384048",
+    "gray5": "#626d79",
+    "gray4": "#99a0a8",
+    "gray2": "#bfc4c9",
+    "gray1": "#dee0e3",
+    "gray0": "#f8f9f9",
+    "darkblue": "#326385",
+    "blue": "#60a3e6",
+    "brightblue": "#5fb7ff",
+    "lightblue": "#b8d5eb",
+    "darkpurple": "#543284",
+    "purple": "#834ecd",
+    "lightpurple": "#e3d7f3",
+    "red": "#c44d58",
+    "pink": "#ff6b6b",
+    "orange": "#ffb56b",
+    "green": "#59cd4e",
+    "teal": "#4ecd83",
+    "cyan": "#4ecdc4",
+    "yellow": "#c7f464"
+  },
+  "radii": [
+    0,
+    4,
+    8,
+    16
+  ],
+  "measures": [
+    24,
+    32,
+    48
+  ],
+  "boxShadows": [
+    "none",
+    "0 1px 2.9px 0.1px rgba(154,156,165,0.1), 0 3.5px 17.6px 0.4px rgba(154,156,165,0.25)",
+    "0px 1px 3px 0 rgba(50,56,81,0.1), 0px 6px 22px 0 rgba(68,76,108,0.12), inset 0px -3px 2.5px 0 rgba(69,78,114,0.03)",
+    "0px 1px 3px 0 rgba(112,154,206,0.3), 0px 6px 22px 0 rgba(83,128,184,0.12), inset 0px -3px 2.5px 0 rgba(93,121,155,0.05)",
+    "0px 50px 160px 0 rgba(20,52,92,0.18)"
+  ],
+  "lineHeight": "1.5"
+}
